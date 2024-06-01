@@ -1,0 +1,147 @@
+body {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  background-color: #1D2F30;
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+
+.header {
+  background-color: #1D2F30;
+  height: 60px;
+  padding: 20px 0 20px;
+  box-sizing: border-box;
+}
+.header__row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  height: 20px;
+}
+.logo img {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.menu__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+.menu__item + .menu__item {
+  margin-left: 64px;
+}
+.menu__link {
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.menu__link:hover {
+  color: #BAE249;
+}
+.menu__link:focus {
+  border: 1px solid #83A440;
+  color: #fff;
+}
+.menu__link:active {
+  color: #688B05;
+  border: none;
+}
+
+.search {
+  display: flex;
+}
+.search__item:not(:last-child) {
+  margin-right: 64px;
+}
+.search__item:hover {
+  stroke: #91AC46;
+}
+.search__item:focus {
+  border: 1px solid #83A440;
+  stroke: #fff;
+}
+.search__item:active {
+  stroke: #688B05;
+  border: none;
+}
+
+.hero {
+  padding-top: 115px;
+  padding-bottom: 115px;
+  display: block;
+  position: relative;
+  box-sizing: border-box;
+}
+.hero:after {
+  content: "";
+  background-image: url(../images/hero.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 0.3;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+  box-sizing: border-box;
+}
+.hero__row {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  max-width: 60%;
+}
+.hero__title {
+  margin: 0 0 22px;
+  font-family: "Cormorant", serif;
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 100%;
+  color: #fff;
+}
+.hero__desc {
+  font-family: "Open Sans", sans-serif;
+  margin: 0 0 24px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: #fff;
+}
+.hero__desc > *:first-child {
+  margin-top: 0;
+}
+.hero__desc > *:last-child {
+  margin-bottom: 0;
+}
+.hero__link {
+  display: flex;
+  align-items: center;
+  width: -moz-max-content;
+  width: max-content;
+  font-weight: 700;
+  font-size: 16px;
+  color: #bae249;
+}
+.hero__link svg {
+  margin-left: 8px;
+}
+
+a {
+  text-decoration: none;
+}
