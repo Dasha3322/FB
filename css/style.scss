@@ -7,12 +7,14 @@ body{
     font-size: 16px;
     line-height: 150%;
     background-color: #1D2F30;
+    box-sizing: border-box;
 }
 .container{
     max-width: 1140px;
     margin: 0 auto;
     padding: 0 15px;
     box-sizing: border-box;
+    overflow: hidden;
 }
 .header{
     background-color: #1D2F30;
@@ -243,7 +245,7 @@ a{
         line-height: 150%;
     }
     &__desc{
-        max-width: 223px;
+        max-width: 100%;
         margin: 0 0 14px;
         font-family: $openSans;
         font-weight: 400;
@@ -257,7 +259,6 @@ a{
     &__button{
         display: block;
         margin-top: auto;
-   
     }
 }
 .btn{
@@ -505,7 +506,7 @@ a{
     flex-direction: column;
     border: 1px solid #bae249;
     padding: 20px 59px;
-    width: 145px;
+    max-width: 145px;
     height: 45px;
     font-weight: 700;
     font-size: 16px;
@@ -571,4 +572,113 @@ a{
 .copyright{
    text-align: center;
    color: #899D9D;
+}
+
+@media (max-width:1100px){
+    .container{
+        padding: 0 30px;
+    }
+    .gallery__card{
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .card{
+        width: 30%;
+        margin-right: 30px;
+        margin-bottom: 30px;
+    }
+}
+@media (max-width:1024px){
+    .container{
+        padding: 0 30px;
+    }
+    .gallery__card{
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .card{
+        width: 29%;
+        margin-right: 30px;
+        margin-bottom: 30px;
+    }
+    .wrapper__container{
+        display: flex;
+        flex-wrap: wrap;
+        max-height: 100%;
+    }
+    .header__menu{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        left: 0;
+        top: 80px;
+        margin-right: 0;
+        width: 100%;
+    }
+    .hero__row{
+        max-width: 100%;
+    }
+    .about__card{
+        width: 100%;
+        max-width: 100%;
+    }
+    .about__title{
+        margin: 0 0 30px 0;
+    }
+
+}
+@media (max-width:920px){
+    .container{
+        padding: 0 30px;
+    }
+    .card{
+        width: 45%;
+    }
+}
+@media (max-width:768px){
+    .hero__title{
+        font-size: 48px;
+    }
+    .hero__desc{
+        display: none;
+    }
+    .card{
+        width: 45%;
+    }
+    .contact__desc{
+        display: none;
+    }
+
+}
+@media (max-width:699px){
+    .card{
+        width: 100%;
+    }
+    .card__content p{
+        width: 100%;
+    }
+    .header__menu{
+        justify-content: flex-start;
+        padding-left: 30px;
+    }
+}
+@media (max-width:576px){
+    .menu__list{
+        flex-wrap: wrap;
+        gap: 10px;
+        width: 50%;
+    }
+    .menu__item + .menu__item{
+        margin-left: 0;
+    }
+}
+@media (max-width:420px){
+    .hero__title{
+        margin-top: 30px;
+    }
+    .form__input{
+        width: 80%;
+    }
+
 }
