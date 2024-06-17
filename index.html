@@ -6,6 +6,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/slick.css"/>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Document</title>
@@ -70,7 +71,7 @@
         </div>
         <section class="gallery">
             <div class="container">
-                <div class="gallery__card">
+                <div class="gallery__card slider">
                     <div class="card">
                         <div class="card__img">
                             <div class="card__img-cyrcle">
@@ -138,7 +139,6 @@
                                 Подробнее
                             </button>
                         </div>
-
                     </div>
                 </div>
                 <div class="arrow">
@@ -169,6 +169,12 @@
                     <div class="about__wrapper">
                         <div class="about__image">
                             <img src="images/list/big_card.jpg" alt="">
+                            <div class="about__swipe">
+                                Swipe to see more
+                                <svg width="81" height="8" viewBox="0 0 81 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M80.3536 4.35356C80.5488 4.1583 80.5488 3.84172 80.3536 3.64645L77.1716 0.464473C76.9763 0.269211 76.6597 0.269211 76.4645 0.464473C76.2692 0.659735 76.2692 0.976317 76.4645 1.17158L79.2929 4.00001L76.4645 6.82843C76.2692 7.0237 76.2692 7.34028 76.4645 7.53554C76.6597 7.7308 76.9763 7.7308 77.1716 7.53554L80.3536 4.35356ZM-4.37114e-08 4.5L80 4.50001L80 3.50001L4.37114e-08 3.5L-4.37114e-08 4.5Z" fill="#899D9D" />
+                                  </svg>
+                            </div>
                         </div>
                     </div>
                     <div class="about__card">
@@ -203,10 +209,10 @@
                             </p>
                         </div>
                     </div> 
-                    <form action="#" class="contact__form">
+                    <form action="#" class="form contact__form">
                         <input type="text" placeholder="Имя" class="form__input">
                         <input type="email" required placeholder="Email" class="form__input">
-                        <button class="form-submit">Отправить</button>
+                        <button class="form__submit">Отправить</button>
                     </form>
                 </div>
             </div>
@@ -279,5 +285,11 @@
             f&b ® 2020
         </div>
     </div>
+    
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+    crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/slick.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>

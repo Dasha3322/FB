@@ -206,8 +206,9 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 255px;
+  max-width: 255px;
   border: 1px solid #0b1919;
+  max-height: 100%;
   height: 493px;
   background-color: #1d2f30;
 }
@@ -233,6 +234,11 @@ a {
   font-size: 16px;
   text-align: center;
   color: #899d9d;
+}
+.card__img img {
+  display: block;
+  box-sizing: border-box;
+  max-width: 100%;
 }
 .card__content {
   box-sizing: border-box;
@@ -348,8 +354,22 @@ a {
 .about {
   margin-bottom: 60px;
 }
+.about__image {
+  position: relative;
+}
 .about__image img {
   max-width: 825px;
+  display: block;
+}
+.about__swipe {
+  position: absolute;
+  left: 15px;
+  bottom: 16px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: #899D9D;
+  display: none;
 }
 .about__title {
   font-family: "Cormorant", serif;
@@ -515,7 +535,7 @@ a {
   color: #0B1919;
 }
 
-.form-submit {
+.form__submit {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -532,21 +552,21 @@ a {
   background-color: #bae249;
   cursor: pointer;
 }
-.form-submit:hover {
+.form__submit:hover {
   border-color: #91AC46;
   color: #0b1919;
   background-color: #91AC46;
 }
-.form-submit:focus-visible {
+.form__submit:focus-visible {
   outline: #83a440 solid 1px;
   outline-offset: 2px;
 }
-.form-submit:disabled {
+.form__submit:disabled {
   border-color: #899d9d;
   color: #899d9d;
   background-color: transparent;
 }
-.form-submit:active {
+.form__submit:active {
   border-color: #91AC46;
   color: #0b1919;
   background-color: #91AC46;
@@ -559,12 +579,13 @@ a {
   box-sizing: border-box;
 }
 .footer__list {
-  margin: 16px 0 16px 0;
-  padding: 0;
+  margin: 0;
+  padding: 16px 0 16px 0;
   list-style: none;
   display: flex;
   gap: 30px;
   transition: 0.3s;
+  line-height: 1;
 }
 .footer__list a {
   text-decoration: none;
@@ -589,32 +610,42 @@ a {
   color: #899D9D;
 }
 
+.dots-style {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  position: absolute;
+  bottom: -45px;
+  left: 30%;
+}
+
+.dots-style button {
+  background: #0B1919;
+  border: none;
+  border-radius: 50%;
+  font-size: 0;
+  height: 10px;
+  width: 10px;
+  margin: 5px;
+  outline: none;
+}
+
+.dots-style li[class=slick-active] button {
+  background: #BAE249;
+}
+
 @media (max-width: 1100px) {
   .container {
     padding: 0 30px;
   }
-  .gallery__card {
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-  .card {
-    width: 30%;
-    margin-right: 30px;
-    margin-bottom: 30px;
+  .about__swipe {
+    display: none;
   }
 }
 @media (max-width: 1024px) {
   .container {
     padding: 0 30px;
-  }
-  .gallery__card {
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-  .card {
-    width: 29%;
-    margin-right: 30px;
-    margin-bottom: 30px;
   }
   .wrapper__container {
     display: flex;
@@ -637,17 +668,30 @@ a {
   .about__card {
     width: 100%;
     max-width: 100%;
+    margin-top: 30px;
   }
   .about__title {
     margin: 0 0 30px 0;
+  }
+  .about__wrapper {
+    overflow: scroll;
+    scrollbar-width: none;
+  }
+  .about__wrapper::-webkit-scrollbar {
+    background-color: transparent;
+    display: none;
+    width: 0;
+  }
+  .about__swipe {
+    display: none;
   }
 }
 @media (max-width: 920px) {
   .container {
     padding: 0 30px;
   }
-  .card {
-    width: 45%;
+  .about__swipe {
+    display: block;
   }
 }
 @media (max-width: 768px) {
@@ -657,20 +701,11 @@ a {
   .hero__desc {
     display: none;
   }
-  .card {
-    width: 45%;
-  }
   .contact__desc {
     display: none;
   }
 }
 @media (max-width: 699px) {
-  .card {
-    width: 100%;
-  }
-  .card__content p {
-    width: 100%;
-  }
   .header__menu {
     justify-content: flex-start;
     padding-left: 30px;
@@ -686,11 +721,17 @@ a {
     margin-left: 0;
   }
 }
-@media (max-width: 420px) {
+@media (max-width: 425px) {
   .hero__title {
     margin-top: 30px;
   }
   .form__input {
     width: 80%;
+  }
+  .arrow {
+    display: none;
+  }
+  .about {
+    margin-top: 30px;
   }
 }
