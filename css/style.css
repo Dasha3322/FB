@@ -205,7 +205,6 @@ a {
 .card {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   max-width: 255px;
   border: 1px solid #0b1919;
   max-height: 100%;
