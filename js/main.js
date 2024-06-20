@@ -31,7 +31,7 @@ $('.slider').slick({
             slidesToShow: 2,
             slidesToScroll: 1,
             infinite: true,
-            dots: false,
+            dots: true,
             arrows: false,
             dotsClass: 'dots-style',
           }
@@ -42,7 +42,7 @@ $('.slider').slick({
           slidesToShow: 1,
           slidesToScroll: 1,
           infinite: true,
-          dots: false,
+          dots: true,
           arrows: false,
           dotsClass: 'dots-style',
         }

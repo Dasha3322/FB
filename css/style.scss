@@ -713,6 +713,9 @@ a{
     .contact__desc{
         display: none;
     }
+    .arrow{
+        display: none;
+    }
 
 }
 @media (max-width:699px){
@@ -726,6 +729,9 @@ a{
         justify-content: flex-start;
         padding-left: 30px;
     }
+    .arrow{
+        display: none;
+    }
 }
 @media (max-width:576px){
     .menu__list{
@@ -735,6 +741,9 @@ a{
     }
     .menu__item + .menu__item{
         margin-left: 0;
+    }
+    .arrow{
+        display: none;
     }
 }
 @media (max-width:425px){
